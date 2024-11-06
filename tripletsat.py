@@ -1,4 +1,9 @@
 # 构建Triplet训练测试数据集dataset
+
+import torch
+import torch.nn as nn
+import torchvision
+
 class TripleSAT(torch.utils.data.Dataset): 
     def __init__(self, dataset, transform=None):
         self.dataset = dataset
