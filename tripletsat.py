@@ -3,8 +3,9 @@
 import torch
 import torch.nn as nn
 import torchvision
+import numpy as np
 
-class TripleSAT(torch.utils.data.Dataset): 
+class TripletSAT(torch.utils.data.Dataset): 
     def __init__(self, dataset, transform=None):
         self.dataset = dataset
         self.transform = transform
