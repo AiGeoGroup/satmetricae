@@ -1,3 +1,7 @@
+import torch.nn as nn
+import torch
+import torchvision
+
 # 定义Triplet损失
 
 class TripletLoss(nn.Module):
