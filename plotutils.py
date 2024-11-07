@@ -11,6 +11,8 @@ from skimage.io import imread
 from skimage.transform import resize
 from sklearn.model_selection import train_test_split
 
+from tqdm.notebook import tqdm
+
 
 def display_labels(data_path='/users/sunyong/dataserver/EuroSAT/2750/'):
     # modify to fit your system
