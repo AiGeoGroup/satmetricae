@@ -203,8 +203,8 @@ def plot_test_decoder_images(ae_model, test_loader):
                 image = np.clip(
                     np.array(imagenet_std) * image + np.array(imagenet_mean),
                     0, 1)
-                print(image.shape)
-                print(labels[i * n + j])
+                # print(image.shape)
+                # print(labels[i * n + j])
                 title = test_loader.dataset.classes[labels[i * n + j]]
                 axes[i, j].imshow(image)
                 axes[i, j].set_title(title)
