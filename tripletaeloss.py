@@ -11,9 +11,9 @@ class TripletAELoss(nn.Module):
     def cal_eucliden(self, x1, x2):
         return (x1-x2).pow(2).sum(1)
 
-    def forward(self, anchor, positive, negative, anchor_img, pred_img):
+    def forward(self, anchor, positive, negative, anchor_img, pred_img, lambda=0.01):
         distance_positive = self.cal_eucliden(anchor, positive)
         distance_negative = self.cal_eucliden(anchor, negative)
         contruct_loss = self.cal_eucliden(anchor_img, pred_img)
-        losses = torch.relu(distance_positive - distance_negative + self.margin) + contruct_loss
+        losses = torch.relu(distance_positive - distance_negative + self.margin) + lambda * contruct_loss
         return losses.mean()
