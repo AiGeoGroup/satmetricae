@@ -9,6 +9,7 @@ class TripletSAT(torch.utils.data.Dataset):
     def __init__(self, dataset, transform=None):
         self.dataset = dataset
         self.transform = transform
+        self.classes = dataset.classes
 
         self.labels = np.array(dataset.targets)
         self.labels_set = set(self.labels)
