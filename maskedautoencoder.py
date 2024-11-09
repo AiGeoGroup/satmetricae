@@ -2,6 +2,7 @@ import os
 
 import torch
 import torchvision
+import lightly.data as data
 from lightly.models import utils
 from lightly.models.modules import MAEDecoderTIMM, MaskedVisionTransformerTIMM
 from lightly.transforms import MAETransform
