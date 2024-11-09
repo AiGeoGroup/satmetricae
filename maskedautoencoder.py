@@ -15,8 +15,8 @@ IMAGENET_NORMALIZE["mean"], IMAGENET_NORMALIZE["std"] = [0.485, 0.456, 0.406], [
 
 
 class MAE(nn.Module):
-    def __init__(self, vit):
-        super().__init__(decoder_dim=512, mask_ratio=0.75)
+    def __init__(self, vit, decoder_dim=512, mask_ratio=0.75):
+        super().__init__()
 
         self.mask_ratio = mask_ratio
         self.patch_size = vit.patch_embed.patch_size[0]
